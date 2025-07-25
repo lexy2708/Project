@@ -1,9 +1,98 @@
-<!DOCTYPE  html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>411b2f56-3580-4bfb-8ec7-9e52ad5fb925</title><meta name="author" content="User"/><style type="text/css"> * {margin:0; padding:0; text-indent:0; }
- p { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; margin:0pt; }
- .s1 { color: #4471C4; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
- .h1 { color: #6F2F9F; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
- .s2 { color: #00AF50; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
- .s3 { color: #C45811; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
- .s4 { color: #F00; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
-</style></head><body><p style="padding-top: 1pt;padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;!DOCTYPE html&gt;</p><p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;html lang=&quot;id&quot;&gt;</p><p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">&lt;head&gt;</p><p style="padding-left: 9pt;text-indent: 0pt;text-align: left;">&lt;meta charset=&quot;UTF-8&quot;&gt;</p><p style="padding-left: 9pt;text-indent: 0pt;text-align: left;">&lt;title&gt;Kalkulator Sederhana&lt;/title&gt;</p><p class="s1" style="padding-left: 14pt;text-indent: -4pt;text-align: left;">&lt;style&gt; <span style=" color: #000;">body {</span></p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">font-family: Arial, sans-serif; display: flex;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">justify-content: center; align-items: center; height: 100vh; background: #f0f0f0;</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="padding-top: 13pt;padding-left: 19pt;text-indent: -5pt;text-align: left;">.<span class="h1">kalkulator </span>{ background: #fff; padding: 20px; border-radius: 10px;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 260px;</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="padding-top: 13pt;padding-left: 14pt;text-indent: 0pt;text-align: left;">.<span class="s2">layar </span>{</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">width: 100%; height: 50px; font-size: 24px; text-align: right;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: -5pt;text-align: left;">.<span class="s3">tombol </span>{ display: grid;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">grid-template-columns: repeat(4, 1fr); gap: 10px;</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="padding-top: 13pt;padding-left: 19pt;text-indent: -5pt;text-align: left;">.tombol button { padding: 15px; font-size: 18px; border: none; border-radius: 5px; background: #eee; cursor: pointer;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">transition: background 0.2s;</p><p style="padding-left: 14pt;text-indent: 0pt;line-height: 13pt;text-align: left;">}</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: -5pt;text-align: left;">.tombol button:hover { background: #ccc;</p><p style="padding-left: 14pt;text-indent: 0pt;line-height: 13pt;text-align: left;">}</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: -5pt;text-align: left;">.tombol .<span class="s4">operator </span>{ background: #f9a825;</p><p style="padding-top: 1pt;padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">color: white;</p><p style="padding-left: 14pt;text-indent: 0pt;line-height: 13pt;text-align: left;">}</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: -5pt;text-align: left;">.tombol .operator:hover { background: #f57f17;</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="padding-top: 13pt;padding-left: 19pt;text-indent: -5pt;text-align: left;">.tombol .equals { background: #43a047; color: white;</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: -5pt;text-align: left;">.tombol .equals:hover { background: #2e7d32;</p><p style="padding-left: 14pt;text-indent: 0pt;line-height: 13pt;text-align: left;">}</p><p class="s1" style="padding-left: 9pt;text-indent: 0pt;text-align: left;">&lt;/style&gt;</p><p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">&lt;/head&gt;</p><p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;body&gt;</p><p style="padding-left: 9pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;div class=&quot;<span class="h1">kalkulator</span>&quot;&gt;</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">&lt;<span style=" color: #FFC000;">input type</span>=&quot;text&quot; class=&quot;<span class="s2">layar</span>&quot; id=&quot;<span style=" color: #FFC000;">layar</span>&quot; disabled&gt;</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">&lt;div class=&quot;<span class="s3">tombol</span>&quot;&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;clearLayar()&quot;&gt;C&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;button onclick=&quot;hapusSatu()&quot;&gt;←&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;%&#39;)&quot;&gt;%&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button class=&quot;operator&quot; onclick=&quot;tambahAngka(&#39;/&#39;)&quot;&gt;/&lt;/button&gt;</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;7&#39;)&quot;&gt;7&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;8&#39;)&quot;&gt;8&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;9&#39;)&quot;&gt;9&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button class=&quot;<span style=" color: #F00;">operator</span>&quot; onclick=&quot;tambahAngka(&#39;*&#39;)&quot;&gt;*&lt;/button&gt;</p><p style="padding-top: 13pt;padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;4&#39;)&quot;&gt;4&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;5&#39;)&quot;&gt;5&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;6&#39;)&quot;&gt;6&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button class=&quot;operator&quot; onclick=&quot;tambahAngka(&#39;-&#39;)&quot;&gt;-&lt;/button&gt;</p><p style="padding-top: 13pt;padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;1&#39;)&quot;&gt;1&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;2&#39;)&quot;&gt;2&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;3&#39;)&quot;&gt;3&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;button class=&quot;operator&quot; onclick=&quot;tambahAngka(&#39;+&#39;)&quot;&gt;+&lt;/button&gt;</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;0&#39;)&quot;&gt;0&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">&lt;button onclick=&quot;tambahAngka(&#39;.&#39;)&quot;&gt;.&lt;/button&gt;</p><p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;button class=&quot;equals&quot; onclick=&quot;hitung()&quot;&gt;=&lt;/button&gt;</p><p style="padding-left: 14pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;/div&gt;</p><p style="padding-left: 9pt;text-indent: 0pt;text-align: left;">&lt;/div&gt;</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 9pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;script&gt;</p><p style="padding-left: 14pt;text-indent: 0pt;line-height: 13pt;text-align: left;">let layar = <span style=" color: #6FAC46;">document.getElementById</span>(&quot;layar&quot;);</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: -5pt;text-align: left;">function tambahAngka(nilai) { <span style=" color: #F00;">layar.value += nilai;</span></p><p style="padding-left: 14pt;text-indent: 0pt;line-height: 13pt;text-align: left;">}</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 19pt;text-indent: -5pt;text-align: left;">function clearLayar() { layar.value = &quot;&quot;;</p><p style="padding-top: 1pt;padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="padding-top: 13pt;padding-left: 14pt;text-indent: 0pt;text-align: left;">function hapusSatu() {</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">layar.value = layar.value.slice(0, -1);</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="padding-top: 13pt;padding-left: 19pt;text-indent: -5pt;text-align: left;">function hitung() { try {</p><p style="padding-left: 24pt;text-indent: 0pt;text-align: left;">layar.value = eval(layar.value);</p><p style="padding-left: 19pt;text-indent: 0pt;line-height: 13pt;text-align: left;">} catch {</p><p style="padding-left: 24pt;text-indent: 0pt;line-height: 13pt;text-align: left;">layar.value = &quot;Error!&quot;;</p><p style="padding-left: 19pt;text-indent: 0pt;text-align: left;">}</p><p style="padding-left: 14pt;text-indent: 0pt;text-align: left;">}</p><p style="padding-left: 9pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;/script&gt;</p><p style="padding-left: 5pt;text-indent: 0pt;line-height: 13pt;text-align: left;">&lt;/body&gt;</p><p style="padding-left: 5pt;text-indent: 0pt;text-align: left;">&lt;/html&gt;</p></body></html>
+<!DOCTYPE html> 
+<html lang="id"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Kalkulator Sederhana</title> 
+  <style>     body {       font-family: Arial, sans-serif;       display: flex;       justify-content: center;       align-items: center;       height: 100vh; 
+      background: #f0f0f0; 
+    } 
+ 
+    .kalkulator {       background: #fff;       padding: 20px;       border-radius: 10px;       box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+      width: 260px; 
+    } 
+ 
+    .layar {       width: 100%;       height: 50px;       font-size: 24px; 
+      text-align: right;       margin-bottom: 10px;       padding: 10px;       border: 1px solid #ccc;       border-radius: 5px; 
+    } 
+ 
+    .tombol {       display: grid;       grid-template-columns: repeat(4, 1fr); 
+      gap: 10px; 
+    } 
+ 
+    .tombol button {       padding: 15px;       font-size: 18px;       border: none;       border-radius: 5px;       background: #eee;       cursor: pointer; 
+      transition: background 0.2s; 
+    } 
+ 
+    .tombol button:hover { 
+      background: #ccc; 
+    } 
+ 
+    .tombol .operator {       background: #f9a825;       color: white; 
+    } 
+ 
+    .tombol .operator:hover { 
+      background: #f57f17; 
+    } 
+ 
+    .tombol .equals {       background: #43a047; 
+      color: white; 
+    } 
+ 
+    .tombol .equals:hover { 
+      background: #2e7d32; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="kalkulator"> 
+    <input type="text" class="layar" id="layar" disabled> 
+    <div class="tombol"> 
+      <button onclick="clearLayar()">C</button> 
+      <button onclick="hapusSatu()">←</button> 
+      <button onclick="tambahAngka('%')">%</button> 
+      <button class="operator" onclick="tambahAngka('/')">/</button> 
+ 
+      <button onclick="tambahAngka('7')">7</button> 
+      <button onclick="tambahAngka('8')">8</button> 
+      <button onclick="tambahAngka('9')">9</button> 
+      <button class="operator" onclick="tambahAngka('*')">*</button> 
+ 
+      <button onclick="tambahAngka('4')">4</button> 
+      <button onclick="tambahAngka('5')">5</button> 
+      <button onclick="tambahAngka('6')">6</button> 
+      <button class="operator" onclick="tambahAngka('-')">-</button> 
+ 
+      <button onclick="tambahAngka('1')">1</button> 
+      <button onclick="tambahAngka('2')">2</button> 
+      <button onclick="tambahAngka('3')">3</button> 
+      <button class="operator" onclick="tambahAngka('+')">+</button> 
+ 
+      <button onclick="tambahAngka('0')">0</button> 
+      <button onclick="tambahAngka('.')">.</button> 
+      <button class="equals" onclick="hitung()">=</button> 
+    </div> 
+  </div> 
+ 
+  <script> 
+    let layar = document.getElementById("layar"); 
+ 
+    function tambahAngka(nilai) { 
+      layar.value += nilai; 
+    } 
+ 
+    function clearLayar() {       layar.value = ""; 
+    } 
+ 
+    function hapusSatu() { 
+      layar.value = layar.value.slice(0, -1); 
+    } 
+ 
+    function hitung() { 
+      try { 
+        layar.value = eval(layar.value); 
+      } catch {         layar.value = "Error!"; 
+      } 
+    } 
+  </script> 
+</body> 
+</html> 
