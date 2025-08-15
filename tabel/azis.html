@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Form ke tabel</title>
+    <style>
+       body {
+      font-family: Arial, sans-serif;
+      padding: 200px;
+      background: #df0ceb;
+background: -webkit-linear-gradient(335deg, rgba(223, 12, 235, 1) 0%, rgba(27, 42, 181, 1) 54%);
+background: -moz-linear-gradient(335deg, rgba(223, 12, 235, 1) 0%, rgba(27, 42, 181, 1) 54%);
+background: linear-gradient(335deg, rgba(223, 12, 235, 1) 0%, rgba(27, 42, 181, 1) 54%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#DF0CEB", endColorstr="#1B2AB5", GradientType=0);
+      
+    }
+
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #f7f8fa; /* oranye cerah */
+      color: #fff;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #333;
+      text-align: center;
+      color: black;
+    }
+
+    th {
+      background-color: #0bc2d3; /* merah cerah */
+    }
+
+    input[type="text"], input[type="number"], input[type="file"] {
+      padding: 5px;
+      margin: 5px;
+      background-color: rgba(18, 113, 181, 0.8); /* ungu cerah */
+      color: #fff;
+      border: none;
+    }
+
+    button {
+      padding: 6px 12px;
+      background-color: #1424d5; /* hijau cerah */
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #06bbf7;
+    }
+         
+    img {
+       max-width: 350px;
+       height: auto;
+       object-fit: cover;
+       border-radius: 10px;
+    }
+    </style>
+
+</head>
+<body>
+   <h2>Form Input Siswa</h2>
+
+<form id="formInput">
+    Nama: <input type="text" id="nama" required>
+    Usia: <input type="number" id="usia" required>
+    Foto: <input type="file" id="gambar" accept="image/*" required>
+<button type="submit">Tambah</button>
+</form>
+<h3>Data Tabel:</h3>
+<table id="tabelData">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Usia</th>
+            <TH>FOTO</TH>
+        </tr>
+    </thead>
+<tbody>
+<!-- Baris baru akan ditambahkan di sini -->
+
+</tbody>
+</table>
+    
+</body>
+</html>
+<!-- <script>
+ let no = 1;
+ document.getElementById("formInput").addEventListener("submit", function(event) {
+ event.preventDefault(); // Mencegah form reload halaman
+ const nama = document.getElementById("nama").value;
+ const usia = document.getElementById("usia").value;
+ const tabel = document.getElementById("tabelData").getElementsByTagName("tbody")[0];
+
+ const fotofile= document. getElementbyid("foto").files[0];
+
+ if(!fotofile) {
+  alert("pilih foto terlebih dahulu");
+  return;
+ }
+
+ const row = tabel.insertRow();
+ const cell1 = row.insertCell(0);
+ const cell2 = row.insertCell(1);
+ const cell3 = row.insertCell(2);
+ const cell4 = row.insertCell(3);
+ cell1.innerHTML = no++;
+ cell2.innerHTML = nama;
+ cell3.innerHTML = usia;
+ cell4.innerHTML =`<img src="${e.target.result}" alt="foto">`;
+ 
+ // Reset input
+ document.getElementById("formInput").reset();
+ });
+ reader.readAsDataURL(fotofile);
+ </script> -->
+  <script>
+        let no = 1;
+        document.getElementById("formInput").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const nama = document.getElementById("nama").value;
+            const usiaInput = document.getElementById("usia");
+            let usia = usiaInput.value;
+            usia = usia < 0 ? 0 : usia; // Prevent usia below 0
+            const gambarInput = document.getElementById("gambar");
+            const file = gambarInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const tabel = document.getElementById("tabelData").getElementsByTagName("tbody")[0];
+                    const row = tabel.insertRow();
+                    const cell1 = row.insertCell(0);
+                    const cell2 = row.insertCell(1);
+                    const cell3 = row.insertCell(2);
+                    const cell4 = row.insertCell(3);
+                    cell1.innerHTML = no++;
+                    cell2.innerHTML = nama;
+                    cell3.innerHTML = usia;
+                    cell4.innerHTML = `<img src="${e.target.result}" alt="Gambar Siswa">`;
+                    document.getElementById("formInput").reset();
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
